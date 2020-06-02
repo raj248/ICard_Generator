@@ -1,8 +1,15 @@
 from PIL import Image, ImageDraw, ImageFont, ImageEnhance
+import os
 
 font_bold = './Montserrat-Bold.ttf'
 font_italic = './Montserrat-SemiBoldItalic.ttf'
-save_folder = '../Generated/'
+save_folder = os.getcwd() + '/Generated/'
+
+
+if not(os.path.exists(save_folder)):
+	os.mkdir(save_folder)
+
+
 def GenerateID(stu_details):
 	size = (680,360)
 	base = Image.new("RGBA",size , (255,255,255))

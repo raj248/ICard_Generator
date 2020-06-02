@@ -106,10 +106,9 @@ def OpenImage():
 	photo.set(filename)
 	print(photo.get())
 
-
 but1 = Button(root, text='Generate', command = TakeInput, bd=2)
 but1.place(x = 330, y = 450)
-but2 = Button(root, text = 'Close', command = quit, bd=2)
+but2 = Button(root, text = 'Close', command = root.destroy, bd=2)
 but2.place(x = 130, y = 450)
 but3 = Button(root, text = 'Clear', command = Clear, bd=2)
 but3.place(x = 230, y = 450)
